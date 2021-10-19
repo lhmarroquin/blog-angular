@@ -1,0 +1,12 @@
+<div class="loading" *ngIf="!posts">
+  Cargando...
+</div>
+
+<div class="container-fluid" *ngIf="posts">
+  <h1>{{pageTitle}}</h1>
+
+  <!--LISTADO DE ENTRADAS -->
+  <app-post-list [posts]="posts"
+                 [identity]="identity"
+                 [url]="url"></app-post-list>
+</div>
